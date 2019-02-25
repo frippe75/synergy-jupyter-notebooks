@@ -1,0 +1,15 @@
+notebook:
+  image: frippe75/synergy-notebook
+  ¤ uid is 1000 for jovyan - chown -R 1000:1000 ./notebooks
+  volumes:
+   - ./notebooks:/home/jovyan/work:Z
+  # Exposes port 8888 on 0.0.0.0 - firewall-cmd --zone=public --permanent --add-port=8888/tcp
+  ports:
+   - "8888:8888"
+  # HPE Oneview Python supports using envs among other options
+  # https://github.com/HewlettPackard/python-hpOneView#environment-variables
+  environment:
+   - ONEVIEWSDK_IP='172.16.102.82'
+   - ONEVIEWSDK_USERNAME='Administrator'
+   - ONEVIEWSDK_PASSWORD='secret123'
+   - ONEVIEWSDK_API_VERSION='800'
