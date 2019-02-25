@@ -1,6 +1,7 @@
 notebook:
+  container_name: syn-notebook
   image: frippe75/synergy-notebook
-  ¤ uid is 1000 for jovyan - chown -R 1000:1000 ./notebooks
+  # uid is 1000 for jovyan - chown -R 1000:1000 ./notebooks
   volumes:
    - ./notebooks:/home/jovyan/work:Z
   # Exposes port 8888 on 0.0.0.0 - firewall-cmd --zone=public --permanent --add-port=8888/tcp
@@ -13,3 +14,4 @@ notebook:
    - ONEVIEWSDK_USERNAME='Administrator'
    - ONEVIEWSDK_PASSWORD='secret123'
    - ONEVIEWSDK_API_VERSION='800'
+   - GEN_CERT=yes 
