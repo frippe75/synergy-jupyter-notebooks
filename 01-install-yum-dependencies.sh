@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Docker and docker-compose command
-yum install -y epel-release
-yum install -y docker docker-compose net-utils
+sudo yum install -y epel-release
+sudo yum install -y docker docker-compose net-utils
 
 # Enable and start Docker deamon
-systemctl enable docker
-systemctl start docker
+sudo systemctl enable docker
+sudo systemctl start docker
 

@@ -1,1 +1,1 @@
-docker build -t frippe75/synergy-notebook .
+sudo docker build -t frippe75/synergy-notebook .
