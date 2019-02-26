@@ -12,4 +12,7 @@ RUN conda install -c conda-forge jupyter_contrib_nbextensions
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable python-markdown/main
 
+# Adding JSON pretty print support
+RUN pip install pprint
+
 RUN fix-permissions /home/jovyan/work
