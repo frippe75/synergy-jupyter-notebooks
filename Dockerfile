@@ -15,4 +15,8 @@ RUN jupyter nbextension enable python-markdown/main
 # Adding JSON pretty print support
 RUN pip install pprint
 
+# Ansible Kernel 
+RUN pip install ansible-kernel
+RUN python -m ansible_kernel.install
+
 RUN fix-permissions /home/jovyan/work
