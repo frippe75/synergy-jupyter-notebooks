@@ -10,8 +10,8 @@ notebook:
   # HPE Oneview Python supports using envs among other options
   # https://github.com/HewlettPackard/python-hpOneView#environment-variables
   environment:
-   - ONEVIEWSDK_IP='172.16.102.82'
-   - ONEVIEWSDK_USERNAME='Administrator'
-   - ONEVIEWSDK_PASSWORD='secret123'
-   - ONEVIEWSDK_API_VERSION='800'
+   - ONEVIEWSDK_IP=172.16.102.82
+   - ONEVIEWSDK_USERNAME=Administrator
+   - ONEVIEWSDK_PASSWORD=password
+   - ONEVIEWSDK_API_VERSION=800
    - GEN_CERT=yes 
