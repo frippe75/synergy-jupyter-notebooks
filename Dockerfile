@@ -19,6 +19,9 @@ RUN jupyter nbextension enable python-markdown/main
 # Adding JSON pretty print support
 RUN pip install pprint
 
+# Adding Paramiko (ssh support)
+RUN pip install paramiko
+
 # Ansible Kernel 
 #RUN pip install ansible-kernel
 #RUN python -m ansible_kernel.install
