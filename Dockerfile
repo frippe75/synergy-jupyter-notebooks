@@ -15,6 +15,7 @@ RUN conda install pandas
 RUN conda install -c conda-forge jupyter_contrib_nbextensions
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable python-markdown/main
+RUN jupyter nbextension enable codefolding/main
 
 # Adding JSON pretty print support
 RUN pip install pprint
